@@ -80,7 +80,7 @@ export default function StorageUnitListAdmin() {
 
   // Handle modal close
   function handleClose() {
-    setEditingUnit(null);
+    setEditingUnit(false);
   }
 
   // Render loading or empty state
