@@ -16,7 +16,7 @@ Der Fokus liegt auf einem klar gegliederten, einfach zu bedienenden User-Interfa
 Die Applickation basiert technig auf einem Backend mit SPRINGBOOT (REST-API), einer MySQL Datenbank und einem React-Frontend.
 
 
-## Anforderungskatalog 
+## Anforderungskatalg
 
 | Nr. | Funktion           | Beschreibung                                                               |
 | --- | ------------------ | -------------------------------------------------------------------------- |
@@ -86,19 +86,20 @@ Akzeptanzkriterien:
 
 
 **Entity-Relationship-Diagramm:**
-<img style="border-radius:1rem"  src="./ERD.png" alt="Rentingpage" width="500" />
+<img style="border-radius:1rem"  src="./Pictures/ERD.png" alt="Rentingpage" width="500" />
 
 ### Komponentendiagramm
 Dieses Diagramm zeigt, wie meine Applikation aufgebaut ist.
 - Im Frontend **React**
 - Im Backend **Java (Spring)**
 - Als DB **MySQL**
-- Zwischen dem Front und Backend **Axios**
-![Komponentendiagramm](./Components.png)
+  - Zwischen dem Front und Backend **Axios**
+<img styles="background-color:white" src="./Pictures/Components.png" alt="Componentdiagram" width="500"/>
+
 
 ---
 
-## Storyboard 
+## Storyboard
 
 1. Nutzer gelant auf die Homepage
 2. Fals schon angelegt kann er direkt eine Unit mieten.
@@ -110,7 +111,7 @@ Dieses Diagramm zeigt, wie meine Applikation aufgebaut ist.
 
 Im Bild unten ist das Storyboard mehr im Detail erklärt.
 
-<img src="./StoryBoard.svg" alt="Storyboard" width="1000"/>
+<img src="./Pictures/StoryBoard.svg" alt="Storyboard" width="1000"/>
 
 
 ---
@@ -208,7 +209,7 @@ Im Bild unten ist das Storyboard mehr im Detail erklärt.
 ## Testplan
 
 | Testfall | Beschreibung                     | Erwartetes Ergebnis                 |
-| -------- | -------------------------------- | ----------------------------------- |
+| -------- | -------------------------------- |-------------------------------------|
 | 1        | Anmeldung ohne Passwort          | Validierungsfehler                  |
 | 2        | Ungültige E-Mail-Adresse         | Validierungsfehler                  |
 | 3        | Speichern einer Unit ohne Preis  | Validierungsfehler                  |

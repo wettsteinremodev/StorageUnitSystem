@@ -30,7 +30,7 @@ export default function StorageUnitList() {
       .catch((err) => {
         console.error("Error fetching storage units:", err);
         notify.error("Failed to fetch storage units.");
-        setLoading(false);
+        setLoading();
       });
   }, []); // Empty dependency array means this runs only once on mount
 
@@ -70,7 +70,7 @@ export default function StorageUnitList() {
     try {
       const response = await fetchStorageUnits();
       setStorageUnits(response.data);
-      setEditingUnit(flase); // Close the modal after refreshing
+      setEditingUnit(); // Close the modal after refreshing
     } catch (err) {
       notify.error("Failed to refresh storage units: " + err.message);
     }
@@ -105,12 +105,7 @@ export default function StorageUnitList() {
       {/* List of storage unit cards */}
       <div className="storage-unit-list">
         {sortedUnits.map((unit) => (
-          <div
-            key={unit.id}
-            className="storage-unit-card"
-            onClick={() => handleCardClick(unit)} // Open modal on click
-            style={{ cursor: "pointer" }}
-          >
+          <div key={unit.id} className="storage-unit-card">
             <strong>{unit.name}</strong>
             <p>Size: {unit.sizeInM2} m²</p>
             <p>Price: ${unit.pricePerMonth}/month</p>
@@ -125,6 +120,12 @@ export default function StorageUnitList() {
                 {unit.available ? "Available" : "Not Available"}
               </span>
             </p>
+            <div style={{ marginTop: "1rem" }}>
+              {/* Only show Rent Now button if available */}
+              {unit.available && (
+                <button onClick={() => handleCardClick(unit)}>Rent Now</button>
+              )}
+            </div>
           </div>
         ))}
       </div>
