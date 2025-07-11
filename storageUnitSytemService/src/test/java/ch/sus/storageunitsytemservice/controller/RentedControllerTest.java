@@ -7,6 +7,8 @@ import ch.sus.storageunitsytemservice.service.RentedService;
 import ch.sus.storageunitsytemservice.model.Rented;
 import ch.sus.storageunitsytemservice.model.User;
 import ch.sus.storageunitsytemservice.model.StorageUnit;
+import ch.sus.storageunitsytemservice.exception.ResourceNotFoundException;
+
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -68,6 +70,7 @@ public class RentedControllerTest {
         Mockito.when(rentedService.getById(999)).thenThrow(new ResourceNotFoundException("Not found"));
 
         mockMvc.perform(get("/api/rented/999"))
-                .andExpect(status().isNotFound());
+                .andExpect(status().isNotFound())
+                .andExpect(jsonPath("$.error").value("Not found"));
     }
 }

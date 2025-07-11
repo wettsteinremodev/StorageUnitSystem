@@ -4,6 +4,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import ch.sus.storageunitsytemservice.service.UserService;
+import ch.sus.storageunitsytemservice.exception.ResourceNotFoundException;
+
+
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +20,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import ch.sus.storageunitsytemservice.model.User;
+
+import java.util.Optional;
 
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(controllers = UserController.class)
@@ -62,4 +67,3 @@ public class UserControllerTest {
                 .andExpect(status().isNotFound());
     }
 }
-

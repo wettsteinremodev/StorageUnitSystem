@@ -1,4 +1,5 @@
 package ch.sus.storageunitsytemservice.service;
+import ch.sus.storageunitsytemservice.exception.ResourceNotFoundException;
 
 import ch.sus.storageunitsytemservice.model.Rented;
 import ch.sus.storageunitsytemservice.repo.RentedRepo;
@@ -45,7 +46,7 @@ public class RentedService {
     // Get by ID
     public Rented getById(Integer id) {
         return rentedRepo.findById(id)
-                .orElseThrow(() -> new RuntimeException("Rented with ID: " + id + " not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("Rented with ID: " + id + " not found"));
     }
 
     // Delete by ID
