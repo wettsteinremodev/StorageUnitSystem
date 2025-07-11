@@ -70,7 +70,7 @@ export default function StorageUnitList() {
     try {
       const response = await fetchStorageUnits();
       setStorageUnits(response.data);
-      setEditingUnit(null); // Close the modal after refreshing
+      setEditingUnit(flase); // Close the modal after refreshing
     } catch (err) {
       notify.error("Failed to refresh storage units: " + err.message);
     }
@@ -78,7 +78,7 @@ export default function StorageUnitList() {
 
   // Close the editing modal without refreshing
   function handleClose() {
-    setEditingUnit(null);
+    setEditingUnit();
   }
 
   // Render the main list with sorting dropdown and cards
