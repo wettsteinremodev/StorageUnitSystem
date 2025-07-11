@@ -1,36 +1,6 @@
 /* App.css - app-specific styles */
 
-/* Logo styles */
-.logo {
-  height: 5rem;
-  padding: 1.5rem 0;
-  transition: filter 0.4s ease;
-  cursor: pointer;
-}
 
-.logo:hover {
-  filter: drop-shadow(0 0 10px rgba(111, 66, 214, 0.6)); /* violet glow */
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 12px rgba(114, 74, 213, 0.8));
-}
-
-/* Logo spinning animation */
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 30s linear;
-  }
-}
 
 /* Card styling */
 .card {
@@ -46,15 +16,6 @@
   box-sizing: border-box;
 }
 
-/* Small card tweaks on small screens */
-@media (max-width: 600px) {
-  .card {
-    padding: 1.5rem 2rem;
-  }
-  .logo {
-    height: 4rem;
-  }
-}
 
 /* Storage Unit List Grid */
 .storage-unit-list {
@@ -66,7 +27,7 @@
   margin: 1rem auto 0 auto;
   width: 100%;
   height: calc(2 * 200px + 1.5rem); /* height for exactly 2 rows */
-  overflow: auto; /* scroll if overflow */
+  overflow: none; /* scroll if overflow */
   padding-right: 0.5rem;
   box-sizing: border-box;
 }
@@ -397,5 +358,15 @@
     grid-template-columns: 1fr;
     grid-auto-rows: auto;       /* again, allow content height */
     height: auto;
+  }
+}
+
+/* Small card tweaks on small screens */
+@media (max-width: 600px) {
+  .card {
+    padding: 1.5rem 2rem;
+  }
+  .logo {
+    height: 4rem;
   }
 }

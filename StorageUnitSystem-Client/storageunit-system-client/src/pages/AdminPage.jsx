@@ -9,12 +9,11 @@ import * as api from "../api/api";
  * - Displays a list and handles create/edit/delete through the form
  */
 export default function AdminPage() {
-
-    // Currently selected units for editing
-  const [editingUnit, setEditingUnit] = useState(null); 
+  // Currently selected units for editing
+  const [editingUnit, setEditingUnit] = useState(null);
 
   // List of all rentings from the backend
-  const [units, setUnits] = useState([]); 
+  const [units, setUnits] = useState([]);
 
   // Show/hide form
   const [showForm, setShowForm] = useState(false);
