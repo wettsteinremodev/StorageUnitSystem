@@ -42,4 +42,14 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
 
 		return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
 	}
+
+	@ExceptionHandler(ResourceNotFoundException.class)
+	public ResponseEntity<Object> handleResourceNotFoundException(
+			ResourceNotFoundException ex, WebRequest request) {
+
+		Map<String, String> body = new HashMap<>();
+		body.put("error", ex.getMessage());
+
+		return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
+	}
 }

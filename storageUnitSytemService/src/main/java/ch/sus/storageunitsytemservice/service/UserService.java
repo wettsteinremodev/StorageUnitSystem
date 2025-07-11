@@ -2,6 +2,9 @@ package ch.sus.storageunitsytemservice.service;
 
 import ch.sus.storageunitsytemservice.model.User;
 import ch.sus.storageunitsytemservice.repo.UserRepo;
+import ch.sus.storageunitsytemservice.exception.ResourceNotFoundException;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,7 +46,7 @@ public class UserService {
         if (optionalUser.isPresent()){
             return optionalUser.get();
         } else {
-            throw new RuntimeException("User with ID: " + id +" not Found");
+            throw new ResourceNotFoundException("User with ID: " + id +" not Found");
         }
     }
 

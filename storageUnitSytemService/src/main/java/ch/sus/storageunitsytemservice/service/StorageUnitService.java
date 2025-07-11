@@ -2,6 +2,8 @@ package ch.sus.storageunitsytemservice.service;
 
 import ch.sus.storageunitsytemservice.model.StorageUnit;
 import ch.sus.storageunitsytemservice.repo.StorageUnitRepo;
+import ch.sus.storageunitsytemservice.exception.ResourceNotFoundException;
+
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -95,7 +97,7 @@ public class StorageUnitService {
         if (optionalStorageUnit.isPresent()) {
             return optionalStorageUnit.get();
         } else {
-            throw new RuntimeException("StorageUnit with ID: " + id + " not found");
+            throw new ResourceNotFoundException("StorageUnit with ID: " + id + " not found");
         }
     }
 

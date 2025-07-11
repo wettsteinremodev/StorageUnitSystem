@@ -5,6 +5,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import ch.sus.storageunitsytemservice.service.StorageUnitService;
 import ch.sus.storageunitsytemservice.model.StorageUnit;
+import ch.sus.storageunitsytemservice.exception.ResourceNotFoundException;
+
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
