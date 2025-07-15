@@ -110,19 +110,7 @@ export default function StorageUnitListAdmin() {
       {/* List of storage unit cards */}
       <div className="storage-unit-list">
         {sortedUnits.map((unit) => (
-          <div
-            key={unit.id}
-            className="storage-unit-card"
-            style={{
-              cursor: "default",
-              position: "relative",
-              padding: "1rem",
-              border: "1px solid #ccc",
-              borderRadius: "10px",
-              marginBottom: "1rem",
-              boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
-            }}
-          >
+          <div key={unit.id} className="storage-unit-card">
             <strong>{unit.name}</strong>
             <p>Size: {unit.sizeInM2} m²</p>
             <p>Price: ${unit.pricePerMonth}/month</p>

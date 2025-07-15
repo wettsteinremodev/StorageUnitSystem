@@ -34,7 +34,7 @@
 
 /* Storage Unit Card styles */
 .storage-unit-card {
-  background-color: #7070df;
+  background-color: #4c2ede;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(111, 66, 214, 0.2);
   margin-top: 2%;
@@ -129,7 +129,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,12 +138,12 @@
 
 /* Modal content box */
 .modal-content {
-  background: #7070df;
+  background: #4c2ede;
   padding: 2rem;
   border-radius: 12px;
   max-width: 600px;
   width: 90%;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 053);
   box-sizing: border-box;
   max-height: 90vh;
   overflow-y: auto;
