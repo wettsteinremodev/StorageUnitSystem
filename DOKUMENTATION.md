@@ -171,7 +171,7 @@ Dieses Diagramm zeigt, wie meine Applikation aufgebaut ist.
       style="background-color: white; padding: 1rem; border-radius: 1rem;" 
       src="./Pictures/Components_white_bg.png" 
       alt="Componentdiagram" 
-      width="500" 
+      width="1000" 
     />
 
 ---
