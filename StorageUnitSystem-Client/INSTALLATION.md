@@ -7,7 +7,7 @@
 
 ## Setup Steps
 
-1. **Clone the repository**
+**Clone the repository**
 
 ```bash
 git clone https://github.com/wettsteinremodev/StorageUnitSystem-Client.git
@@ -37,4 +37,3 @@ Open http://localhost:5173/ in your browser to see the app.
 ```bash
 npm test
 ```
-
