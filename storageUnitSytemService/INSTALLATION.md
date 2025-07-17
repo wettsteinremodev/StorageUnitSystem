@@ -82,9 +82,40 @@ SHOW GRANTS FOR 'adminStUn'@'%';
 
 ```
 
-### Dummy-Data
+---
 
-Later you can add test data with this querry to your DB. At this state you cant add the Dummy-Data.
+## Spring-Setup
+
+Open the folder `storageUnitSytemService` in you favourite IDE.
+
+you need to be in that folde or you cant run the commands from the terminal.
+
+```bash
+cd path/to/folder/StorageUnitSystem/storageUnitSystemService
+```
+
+Maven install if needed
+
+```bash
+mvn install
+```
+
+Maven Testing (Running the tests)
+
+```bash
+mvn test
+```
+
+Starting the app
+
+1. Running from your editor
+2. Running thorugh the terminal
+
+```bash
+   mvn spring-boot:run
+```
+
+## Dummy-data
 
 The querry for creating the Dummy-Data: `DummyData.sql`
 
@@ -145,8 +176,4 @@ INSERT INTO rented (id, user_id, storage_unit_id, start_date, end_date) VALUES
 
 ```
 
----
-
-## Spring-Setup
-
-Open the folder `storageUnitSytemService` in you favourite IDE.
+## End
