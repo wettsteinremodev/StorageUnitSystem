@@ -29,6 +29,8 @@
   - [Backend](#backend)
 - [Hilfestellungen](#hilfestellungen)
 
+---
+
 ## Projektidee
 
 Das Storage Unit System is eine Webanwendung, bei welche Nutzer Lagerräume (Units) bequem online von zuhause mieten und verwalten können.
@@ -40,9 +42,13 @@ Der Fokus liegt auf einem klar gegliederten, einfach zu bedienenden User-Interfa
 
 Die Applickation basiert technisch auf einem Backend mit SPRINGBOOT (REST-API), einer MySQL Datenbank und einem React-Frontend.
 
+---
+
 ## Anforderungskatalg
 
 Das Storage Unit System dient der Verwaltung von Lagerräumen und mietverhältnissen. Diese Anwendung ermöglicht Nutzern verfügbare Units leicht zu finden und diese anschliessend zu mieten.
+
+---
 
 ### Funktionale Anforderungen
 
@@ -90,6 +96,8 @@ Akzeptanzkriterien:
 - Der Benutzername muss vorhanden sein.
 - Die Email Adresse muss gültig sein.
 
+---
+
 :watermelon: **Unit mieten**
 Als Nutzer möchte ich Lagerräume mieten können, damit ich z.B meine nicht mehr verwendeten Möbel unterbringen kann.
 
@@ -97,6 +105,8 @@ Akzeptanzkriterien:
 
 - Das Enddatum der neu Angelegten Miete darf nicht in der Vergangenheit liegen.
 - Nach der Buchung eines Lagerraumes soll diese in der Datenbank abgespeichert werden.
+
+---
 
 :grapes: **Lagerflächen verwalten (Admin)**
 Als Admin will ich neue Units anlegen können, damit Nutzer sie im Anschluss mieten können
@@ -115,22 +125,28 @@ Akzeptanzkriterien:
 
 Das [Klassendiagramm](./Pictures/storageUnitSytemServiceClassDiagramm.png) befindet sich im Ordner `Pictures`
 
+---
+
 ### Entity-Relationship-Diagramm (ERD)
 
-:santa: **_Users_**
+:santa: **Users**
 `id: Integer (PK)`
 `username: String`
 `email: String`
 `password: String (vorerst Leer)`
 
-:department*store: \*\*\_StorageUnits*\*\*
+---
+
+:department\*store: **StorageUnits**
 `id: Integer (PK)`
 `name: String („Unit69“)`
 `sizeInM2: Double (in m2)`
 `pricePerMonth: Double`
 `isAvailable: Boolean`
 
-:dollar: **_Rented_** (Verknüpfungstabelle für Buchungen)
+---
+
+:dollar: **Rented** (Verknüpfungstabelle für Buchungen)
 `id: Integer (PK)`
 `user_id: Integer (FK zu User)`
 `storage_unit_id: Integer (FK zu StorageUnit)`
@@ -138,6 +154,8 @@ Das [Klassendiagramm](./Pictures/storageUnitSytemServiceClassDiagramm.png) befin
 `endDate: LocalDate (Wann die Miete endet)`
 
 <img style="border-radius:1rem"  src="./Pictures/ERD.png" alt="Rentingpage" width="500" />
+
+---
 
 ### Komponentendiagramm
 
