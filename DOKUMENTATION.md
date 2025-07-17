@@ -137,7 +137,7 @@ Das [Klassendiagramm](./Pictures/storageUnitSytemServiceClassDiagramm.png) befin
 
 ---
 
-:department\*store: **StorageUnits**
+:store: **StorageUnits**
 `id: Integer (PK)`
 `name: String („Unit69“)`
 `sizeInM2: Double (in m2)`
