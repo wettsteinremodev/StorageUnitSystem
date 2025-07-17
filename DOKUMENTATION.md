@@ -129,29 +129,29 @@ Das [Klassendiagramm](./Pictures/storageUnitSytemServiceClassDiagramm.png) befin
 
 ### Entity-Relationship-Diagramm (ERD)
 
-:santa: **Users**
-`id: Integer (PK)`
-`username: String`
-`email: String`
-`password: String (vorerst Leer)`
+:santa: **Users**    
+`id: Integer (PK)`    
+`username: String`    
+`email: String`    
+`password: String (vorerst Leer)`    
 
 ---
 
-💣 **StorageUnits**
-`id: Integer (PK)`
-`name: String („Unit69“)`
-`sizeInM2: Double (in m2)`
-`pricePerMonth: Double`
-`isAvailable: Boolean`
+💣 **StorageUnits**    
+`id: Integer (PK)`    
+`name: String („Unit69“)`    
+`sizeInM2: Double (in m2)`    
+`pricePerMonth: Double`    
+`isAvailable: Boolean`    
 
 ---
 
-:dollar: **Rented** (Verknüpfungstabelle für Buchungen)
-`id: Integer (PK)`
-`user_id: Integer (FK zu User)`
-`storage_unit_id: Integer (FK zu StorageUnit)`
-`startDate: LocalDate (Wann die Miete beginnt)`
-`endDate: LocalDate (Wann die Miete endet)`
+:dollar: **Rented** (Verknüpfungstabelle für Buchungen)    
+`id: Integer (PK)`    
+`user_id: Integer (FK zu User)`    
+`storage_unit_id: Integer (FK zu StorageUnit)`    
+`startDate: LocalDate (Wann die Miete beginnt)`    
+`endDate: LocalDate (Wann die Miete endet)`    
 
 <img style="border-radius:1rem"  src="./Pictures/ERD.png" alt="Rentingpage" width="500" />
 
