@@ -19,15 +19,11 @@ Die Applickation basiert technig auf einem Backend mit SPRINGBOOT (REST-API), ei
 
 ## Anforderungskatalg
 
-| Nr. | Funktion           | Beschreibung                                                               |
-| --- | ------------------ | -------------------------------------------------------------------------- |
-| A1  | Benutzerverwaltung | Konten anlegen, anpassen und löchen                                        |
-| A2  | Lagerverwaltung    | Admins können Units anlegen, anpassen und löschen                          |
-| A3  | Mietprozesse       | Nutzer können nach Units suchen und diese auch mieten                      |
-| A4  | REST-API           | Die Schnittstelle für die Kommunikation über HTTP (GET, POST, PUT, DELETE) |
-| A5  | Validierung        | Die eingaben werden Serverseitig überprüft                                 |
-| A6  | Datenpersistenz    | Daten werden dauerhaft in der MySQL Datenbank abgespeichert                |
-| A7  | Tests              | Die Applikation ist du Unittest und Mocktests abgesichert                  |
+### Funcktionale Anforderungen
+
+### UI/UX Anforderungen
+
+### Nicht-Funktionale Anforderungen
 
 ---
 
@@ -71,7 +67,7 @@ Akzeptanzkriterien:
 `email: String`
 `password: String (vorerst Leer)`
 
-:department_store: **_StorageUnits_**
+:department*store: \*\*\_StorageUnits*\*\*
 `id: Integer (PK)`
 `name: String („Unit69“)`
 `sizeInM2: Double (in m2)`
@@ -146,6 +142,8 @@ Im Bild unten ist das Storyboard mehr im Detail erklärt.
 ![PUT](https://img.shields.io/badge/PUT-orange) `/api/users/{id}`  
 ![DELETE](https://img.shields.io/badge/DELETE-red) `/api/users/{id}`
 
+**Datenmodell:**
+
 ```json
 {
   "id": 1,
@@ -164,6 +162,8 @@ Im Bild unten ist das Storyboard mehr im Detail erklärt.
 ![PUT](https://img.shields.io/badge/PUT-orange) `/api/storageunits/{id}`  
 ![DELETE](https://img.shields.io/badge/DELETE-red) `/api/storageunits/{id}`
 
+**Datenmodell:**
+
 ```json
 {
   "id": 4,
@@ -181,6 +181,8 @@ Im Bild unten ist das Storyboard mehr im Detail erklärt.
 ![POST](https://img.shields.io/badge/POST-green) `/api/rented/`  
 ![PUT](https://img.shields.io/badge/PUT-orange) `/api/rented//{id}`  
 ![DELETE](https://img.shields.io/badge/DELETE-red) `/api/rented/{id}`
+
+**Datenmodell:**
 
 ```json
 {
