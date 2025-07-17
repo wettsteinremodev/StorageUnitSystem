@@ -37,7 +37,7 @@ Technisch basiert das Projekt auf einem Spring Boot-Backend (Java 17), einer MyS
 ## Links
 
 - [Dokumentation](./DOKUMENTATION.md)
-- [Frontend Installationsanleitung](./storageUnitSytemService/INSTALLATION.md)
+- [Backend Installationsanleitung](./storageUnitSytemService/INSTALLATION.md)
 - [Frontend Installationsanleitung](./StorageUnitSystem-Client/INSTALLATION.md)
 
 ## Kontakt
