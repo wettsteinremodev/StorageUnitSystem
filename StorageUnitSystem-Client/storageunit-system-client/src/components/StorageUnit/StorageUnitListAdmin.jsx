@@ -13,7 +13,7 @@ export default function StorageUnitListAdmin() {
   // State variable to track which field to sort by
   const [sortKey, setSortKey] = useState("name");
 
-  // State variable to hold the currently editing storage unit (for modal)
+  // State variable to hold the currently editing storage unit
   const [editingUnit, setEditingUnit] = useState(null);
 
   // My Notify Alerts
